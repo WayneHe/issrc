@@ -22,7 +22,7 @@ unit Compile;
 interface
 
 uses
-  Windows, SysUtils, CompInt;
+  Winapi.Windows, System.SysUtils, CompInt;
 
 function ISCompileScript(const Params: TCompileScriptParamsEx;
   const PropagateExceptions: Boolean): Integer;
@@ -34,7 +34,7 @@ type
 implementation
 
 uses
-  CompPreprocInt, Commctrl, {$IFDEF IS_DXE2}Vcl.Consts{$ELSE}Consts{$ENDIF}, Classes, IniFiles, TypInfo,
+  CompPreprocInt, Winapi.Commctrl, {$IFDEF IS_DXE2}Vcl.Consts{$ELSE}Consts{$ENDIF}, System.Classes, System.IniFiles, System.TypInfo,
   PathFunc, CmnFunc2, Struct, Int64Em, CompMsgs, SetupEnt,
   FileClass, Compress, CompressZlib, bzlib, LZMA, ArcFour, SHA1,
   MsgIDs, DebugStruct, VerInfo, ResUpdate, CompResUpdate,
@@ -5869,7 +5869,7 @@ type
           CallIdleProc;
         until not SourceIsWildcard or not FindNextFile(H, FindData);
       finally
-        Windows.FindClose(H);
+        Winapi.Windows.FindClose(H);
       end;
     end else
       CallIdleProc;
@@ -5888,7 +5888,7 @@ type
                 SearchWildcard, FileList, DirList, CreateAllSubDirs);
           until not FindNextFile(H, FindData);
         finally
-          Windows.FindClose(H);
+          Winapi.Windows.FindClose(H);
         end;
       end;
     end;
@@ -7587,7 +7587,7 @@ procedure TSetupCompiler.Compile;
               end;
             until not FindNextFile(H, FindData);
           finally
-            Windows.FindClose(H);
+            Winapi.Windows.FindClose(H);
           end;
         end;
       end;

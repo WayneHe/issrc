@@ -53,7 +53,7 @@ function RemoveBackslashUnlessRoot(const S: String): String;
 implementation
 
 uses
-  Windows, SysUtils;
+  Winapi.Windows, System.SysUtils;
 
 function AddBackslash(const S: String): String;
 { Returns S plus a trailing backslash, unless S is an empty string or already

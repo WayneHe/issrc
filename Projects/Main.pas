@@ -14,8 +14,8 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, SysUtils, Messages, Classes, Graphics, Controls, Forms, Dialogs,
-  SetupForm, StdCtrls, Struct, DebugStruct, Int64Em, CmnFunc, CmnFunc2,
+  Winapi.Windows, System.SysUtils, Winapi.Messages, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  SetupForm, Vcl.StdCtrls, Struct, DebugStruct, Int64Em, CmnFunc, CmnFunc2,
   SetupTypes, ScriptRunner, BidiUtils, RestartManager;
 
 type
@@ -245,11 +245,11 @@ function WindowsVersionAtLeast(const AMajor, AMinor: Byte): Boolean;
 implementation
 
 uses
-  ShellAPI, ShlObj,
+  Winapi.ShellAPI, Winapi.ShlObj,
   Msgs, MsgIDs, Install, InstFunc, InstFnc2, RedirFunc, PathFunc,
   Compress, CompressZlib, bzlib, LZMADecomp, ArcFour, SetupEnt, SelLangForm,
   Wizard, DebugClient, VerInfo, Extract, FileClass, Logging, MD5, SHA1,
-  {$IFNDEF Delphi3orHigher} OLE2, {$ELSE} ActiveX, {$ENDIF}
+  {$IFNDEF Delphi3orHigher} Winapi.Winapi.OLE2, {$ELSE} Winapi.ActiveX, {$ENDIF}
   SimpleExpression, Helper, SpawnClient, SpawnServer, LibFusion, BitmapImage;
 
 {$R *.DFM}
@@ -1766,7 +1766,7 @@ function EnumFiles(const EnumFilesProc: TEnumFilesProc;
           end;
         until not FindNextFile(H, FindData);
       finally
-        Windows.FindClose(H);
+        Winapi.Windows.FindClose(H);
       end;
     end;
 
@@ -1784,7 +1784,7 @@ function EnumFiles(const EnumFilesProc: TEnumFilesProc;
               end;
           until not FindNextFile(H, FindData);
         finally
-          Windows.FindClose(H);
+          Winapi.Windows.FindClose(H);
         end;
       end;
     end;
@@ -2714,7 +2714,7 @@ var
           Inc6464(Result, I);
         end;
       until not FindNextFile(H, FindData);
-      Windows.FindClose(H);
+      Winapi.Windows.FindClose(H);
     end;
 
     if RecurseSubDirs then begin
@@ -2730,7 +2730,7 @@ var
             end;
           until not FindNextFile(H, FindData);
         finally
-          Windows.FindClose(H);
+          Winapi.Windows.FindClose(H);
         end;
       end;
     end;

@@ -14,7 +14,7 @@ unit CompressZlib;
 interface
 
 uses
-  Windows, SysUtils, Compress;
+  Winapi.Windows, System.SysUtils, Compress;
 
 function ZlibInitCompressFunctions(Module: HMODULE): Boolean;
 function ZlibInitDecompressFunctions(Module: HMODULE): Boolean;

@@ -7,7 +7,7 @@ unit IsppIdentMan;
 
 interface
 
-uses SysUtils, Classes, IsppIntf, IsppBase;
+uses System.SysUtils, System.Classes, IsppIntf, IsppBase;
 
 type
 
@@ -113,7 +113,7 @@ const
 
 implementation
 
-uses Windows, IsppTranslate, CParser, IsppParser, IsppVarUtils, IsppConsts,
+uses Winapi.Windows, IsppTranslate, CParser, IsppParser, IsppVarUtils, IsppConsts,
   IsppSessions;
 
 const

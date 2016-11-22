@@ -43,7 +43,7 @@ function StrToInteger64(const S: String; var X: Integer64): Boolean;
 implementation
 
 uses
-  SysUtils;
+  System.SysUtils;
 
 function Compare64(const N1, N2: Integer64): Integer;
 { If N1 = N2, returns 0.

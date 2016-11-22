@@ -14,7 +14,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, CommCtrl;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Winapi.CommCtrl;
 
 type
   TCustomFolderTreeView = class;
@@ -135,7 +135,7 @@ implementation
 }
 
 uses
-  PathFunc, ShellApi, UxThemeISX{$IFDEF IS_D12}, Types{$ENDIF};
+  PathFunc, Winapi.ShellApi, UxThemeISX{$IFDEF IS_D12}, System.Types{$ENDIF};
 
 const
   SHPPFW_NONE = $00000000;
@@ -177,7 +177,7 @@ begin
         end;
       until not FindNextFile(H, FindData);
     finally
-      Windows.FindClose(H);
+      Winapi.Windows.FindClose(H);
     end;
   end;
 end;
@@ -1011,7 +1011,7 @@ function TFolderTreeView.ItemChildrenNeeded(const Item: HTREEITEM): Boolean;
             end;
           until not FindNextFile(H, FindData);
         finally
-          Windows.FindClose(H);
+          Winapi.Windows.FindClose(H);
         end;
       end;
     finally
@@ -1131,7 +1131,7 @@ function TStartMenuFolderTreeView.ItemChildrenNeeded(const Item: HTREEITEM): Boo
             end;
           until not FindNextFile(H, FindData);
         finally
-          Windows.FindClose(H);
+          Winapi.Windows.FindClose(H);
         end;
       end;
     finally

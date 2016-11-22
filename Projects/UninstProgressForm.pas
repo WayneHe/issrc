@@ -16,8 +16,8 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  SetupForm, StdCtrls, ExtCtrls, BitmapImage, NewProgressBar, NewStaticText,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  SetupForm, Vcl.StdCtrls, Vcl.ExtCtrls, BitmapImage, NewProgressBar, NewStaticText,
   NewNotebook, BidiCtrls;
 
 type

@@ -12,7 +12,7 @@ library ISCmplr;
 
 uses
   SafeDLLPath in 'SafeDLLPath.pas',
-  SysUtils,
+  System.SysUtils,
   CompInt in 'CompInt.pas',
   CompPreprocInt in 'CompPreprocInt.pas',
   Compile in 'Compile.pas',

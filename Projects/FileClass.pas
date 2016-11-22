@@ -24,7 +24,7 @@ unit FileClass;
 interface
 
 uses
-  Windows, SysUtils, Int64Em;
+  Winapi.Windows, System.SysUtils, Int64Em;
 
 type
   TFileCreateDisposition = (fdCreateAlways, fdCreateNew, fdOpenExisting,

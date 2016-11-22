@@ -12,7 +12,7 @@ unit RegDLL;
 interface
 
 uses
-  Windows;
+  Winapi.Windows;
 
 procedure RegisterServer(const AUnregister: Boolean; const AIs64Bit: Boolean;
   const Filename: String; const AFailCriticalErrors: Boolean);
@@ -20,7 +20,7 @@ procedure RegisterServer(const AUnregister: Boolean; const AIs64Bit: Boolean;
 implementation
 
 uses
-  SysUtils, Forms, PathFunc, CmnFunc, CmnFunc2, InstFunc, Msgs, MsgIDs,
+  System.SysUtils, Vcl.Forms, PathFunc, CmnFunc, CmnFunc2, InstFunc, Msgs, MsgIDs,
   Logging, RedirFunc, Main;
 
 function WaitForAndCloseProcessHandle(var AProcessHandle: THandle): DWORD;

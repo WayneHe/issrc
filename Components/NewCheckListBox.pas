@@ -21,8 +21,8 @@ unit NewCheckListBox;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, UxThemeISX;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.StdCtrls, UxThemeISX;
 
 const
   WM_UPDATEUISTATE = $0128;
@@ -204,7 +204,7 @@ procedure Register;
 implementation
 
 uses
-  TmSchemaISX, PathFunc, {$IFDEF DELPHI2} Ole2 {$ELSE} ActiveX {$ENDIF},
+  TmSchemaISX, PathFunc, {$IFDEF DELPHI2} Winapi.Ole2 {$ELSE} Winapi.ActiveX {$ENDIF},
   BidiUtils{$IFDEF DELPHI2009}, Types{$ENDIF};
 
 const
@@ -659,7 +659,7 @@ var
 begin
   with Canvas do begin
     ItemState := ItemStates[Index];
-    Rect := Classes.Rect(0, 0, ClientWidth, 0);
+    Rect := System.Classes.Rect(0, 0, ClientWidth, 0);
 
     L := ItemState.Level;
     if ItemState.ItemType <> itGroup then

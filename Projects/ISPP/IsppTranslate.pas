@@ -8,7 +8,7 @@ unit IsppTranslate;
 
 interface
 
-uses Windows, SysUtils, Classes, CompPreprocInt, IniFiles, Registry, IsppIntf,
+uses Winapi.Windows, System.SysUtils, System.Classes, CompPreprocInt, System.IniFiles, System.Win.Registry, IsppIntf,
   IsppBase, IsppStacks, IsppIdentMan, IsppParser;
 
 {$I ..\Version.inc}
@@ -191,7 +191,7 @@ begin
   SetLength(Path, MAX_PATH);
   SetLength(Path, GetTempPath(MAX_PATH, PChar(Path)));
   SetLength(Result, MAX_PATH);
-  if Windows.GetTempFileName(PChar(Path), PChar(UpperCase(Original)), 0, PChar(Result)) <> 0 then
+  if Winapi.Windows.GetTempFileName(PChar(Path), PChar(UpperCase(Original)), 0, PChar(Result)) <> 0 then
     SetLength(Result, StrLen(PChar(Result)))
   else
     {$IFDEF IS_D7}

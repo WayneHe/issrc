@@ -4,7 +4,8 @@ interface
 
 implementation
 
-uses Windows, SysUtils, JclHookExcept, JclDebug, TypInfo, IsppTranslate,
+uses
+  VariantsWindows, System.SysUtils, JclHookExcept, JclDebug, TypInfo, IsppTranslate,
   IsppExceptWindow, Forms, IsppIdentMan;
 
 procedure NotifyException(ExceptObj: TObject; ExceptAddr: Pointer;

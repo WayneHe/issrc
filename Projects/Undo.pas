@@ -16,7 +16,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, SysUtils, Int64Em, FileClass, CmnFunc2;
+  Winapi.Windows, System.SysUtils, Int64Em, FileClass, CmnFunc2;
 
 const
   HighestSupportedVersion = 48 {$IFDEF UNICODE} + 1000{$ENDIF};
@@ -158,7 +158,7 @@ function ReadUninstallLogFlags(const F: TFile; const Filename: String): TUninsta
 implementation
 
 uses
-  Messages, ShlObj,
+  Winapi.Messages, Winapi.ShlObj,
   PathFunc, Struct, Msgs, MsgIDs, InstFunc, InstFnc2, RedirFunc, Compress,
   Logging, RegDLL, Helper, LibFusion;
 

@@ -20,7 +20,7 @@ implementation
 
 {$I ..\Version.inc}
 
-uses SysUtils, Classes, IsppStacks {$IFDEF IS_D12}, Windows{$ENDIF};
+uses System.SysUtils, System.Classes, IsppStacks {$IFDEF IS_D12}, Winapi.Windows{$ENDIF};
 
 procedure Warning(const Msg: string; const Args: array of const);
 var

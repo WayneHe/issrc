@@ -11,10 +11,10 @@ library ISPP;
 {$R *.RES}
 
 uses
-  SysUtils,
+  System.SysUtils,
   //IsppDebug in 'IsppDebug.pas',
-  Windows,
-  Classes,
+  Winapi.Windows,
+  System.Classes,
   CompPreprocInt in '..\CompPreprocInt.pas',
   IsppPreprocess in 'IsppPreprocess.pas',
   IsppTranslate in 'IsppTranslate.pas',

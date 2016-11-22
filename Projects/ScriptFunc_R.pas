@@ -21,9 +21,9 @@ procedure ScriptFuncLibraryRegister_R(ScriptInterpreter: TPSExec);
 implementation
 
 uses
-  Windows, ScriptFunc,
-  Forms, uPSUtils, SysUtils, Classes, Graphics, Controls, TypInfo,
-  {$IFNDEF Delphi3orHigher} Ole2, {$ELSE} ActiveX, {$ENDIF}
+  Winapi.Windows, ScriptFunc,
+  Vcl.Forms, uPSUtils, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, System.TypInfo,
+  {$IFNDEF Delphi3orHigher} Winapi.Ole2, {$ELSE} Winapi.ActiveX, {$ENDIF}
   Struct, ScriptDlg, Main, PathFunc, CmnFunc, CmnFunc2, FileClass, RedirFunc,
   Install, InstFunc, InstFnc2, Msgs, MsgIDs, NewDisk, BrowseFunc, Wizard, VerInfo,
   SetupTypes, Int64Em, MD5, SHA1, Logging, SetupForm, RegDLL, Helper,
@@ -1356,7 +1356,7 @@ end;
 procedure _FindClose(var FindRec: TFindRec);
 begin
   if FindRec.FindHandle <> 0 then begin
-    Windows.FindClose(FindRec.FindHandle);
+    Winapi.Windows.FindClose(FindRec.FindHandle);
     FindRec.FindHandle := 0;
   end;
 end;
@@ -1478,7 +1478,7 @@ begin
   end else if Proc.Name = 'FREEDLL' then begin
     Stack.SetBool(PStart, FreeLibrary(Stack.GetInt(PStart-1)));
   end else if Proc.Name = 'CREATEMUTEX' then begin
-    Windows.CreateMutex(nil, False, PChar(Stack.GetString(PStart)));
+    Winapi.Windows.CreateMutex(nil, False, PChar(Stack.GetString(PStart)));
   end else if Proc.Name = 'OEMTOCHARBUFF' then begin
     S := StackGetAnsiString(Stack, PStart);
     OemToCharBuffA(PAnsiChar(S), PAnsiChar(S), Length(S));

@@ -14,7 +14,7 @@ unit Extract;
 interface
 
 uses
-  Windows, SysUtils, Int64Em, FileClass, Compress, Struct, ArcFour;
+  Winapi.Windows, System.SysUtils, Int64Em, FileClass, Compress, Struct, ArcFour;
 
 type
   TExtractorProgressProc = procedure(Bytes: Cardinal);

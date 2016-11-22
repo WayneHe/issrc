@@ -16,7 +16,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, SysUtils, Messages;
+  Winapi.Windows, System.SysUtils, Winapi.Messages;
 
 type
   TSpawnServer = class
@@ -50,7 +50,7 @@ implementation
 {x$DEFINE SPAWNSERVER_RESPAWN_ALWAYS}
 
 uses
-  Classes, Forms, ShellApi, Int64Em, PathFunc, CmnFunc2, InstFunc, SpawnCommon;
+  System.Classes, Vcl.Forms, Winapi.ShellApi, Int64Em, PathFunc, CmnFunc2, InstFunc, SpawnCommon;
 
 type
   TPtrAndSize = record

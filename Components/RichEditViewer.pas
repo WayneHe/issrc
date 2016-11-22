@@ -18,8 +18,8 @@ unit RichEditViewer;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.StdCtrls;
 
 type
   TRichEditViewer = class(TMemo)
@@ -49,7 +49,7 @@ procedure Register;
 implementation
 
 uses
-  RichEdit, ShellApi, BidiUtils, PathFunc;
+  Winapi.RichEdit, winapi.ShellApi, BidiUtils, PathFunc;
 
 const
   { Note: There is no 'W' 1.0 class }

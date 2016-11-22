@@ -24,10 +24,10 @@ function UnpinShellLink(const Filename: String): Boolean;
 implementation
 
 uses
-  Windows, SysUtils, PathFunc, CmnFunc2, InstFunc, Main, Msgs, MsgIDs,
-  {$IFNDEF Delphi3orHigher} OLE2, {$ELSE} ActiveX, ComObj, {$ENDIF}
-  {$IFDEF IS_D14} PropSys, {$ENDIF}
-  ShellAPI, ShlObj;
+  Winapi.Windows, System.SysUtils, PathFunc, CmnFunc2, InstFunc, Main, Msgs, MsgIDs,
+  {$IFNDEF Delphi3orHigher} Winapi.OLE2, {$ELSE} Winapi.ActiveX, System.Win.ComObj, {$ENDIF}
+  {$IFDEF IS_D14} Winapi.PropSys, {$ENDIF}
+  Winapi.ShellAPI, Winapi.ShlObj;
 
 function IsWindowsXP: Boolean;
 { Returns True if running Windows XP or later }
@@ -308,7 +308,7 @@ var
   OleResult: HRESULT;
   Obj: IUnknown;
   SL: IShellLink;
-  PS: {$IFDEF IS_D14}PropSys.{$ENDIF}IPropertyStore;
+  PS: {$IFDEF IS_D14}Winapi.PropSys.{$ENDIF}IPropertyStore;
   PV: TPropVariant;
   PF: IPersistFile;
   WideAppUserModelID, WideFilename: WideString;
@@ -350,7 +350,7 @@ begin
   { Note: Vista and newer support IPropertyStore but Vista errors if you try to
     commit a PKEY_AppUserModel_ID, so avoid setting the property on Vista. }
   if IsWindows7 and ((AppUserModelID <> '') or ExcludeFromShowInNewInstall or PreventPinning) then begin
-    PS := Obj as {$IFDEF IS_D14}PropSys.{$ENDIF}IPropertyStore;
+    PS := Obj as {$IFDEF IS_D14}Winapi.PropSys.{$ENDIF}IPropertyStore;
     { According to MSDN the PreventPinning property should be set before the ID property. In practice
       this doesn't seem to matter - at least not for shortcuts - but do it first anyway. }
     if PreventPinning then begin

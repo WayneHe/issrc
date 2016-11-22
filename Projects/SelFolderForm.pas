@@ -14,8 +14,8 @@ unit SelFolderForm;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  SetupForm, StdCtrls, FolderTreeView, NewStaticText, BidiCtrls; 
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  SetupForm, Vcl.StdCtrls, FolderTreeView, NewStaticText, BidiCtrls; 
 
 type
   TSelectFolderForm = class(TSetupForm)

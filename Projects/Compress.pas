@@ -14,7 +14,7 @@ unit Compress;
 interface
 
 uses
-  Windows, SysUtils, Int64Em, FileClass;
+  Winapi.Windows, System.SysUtils, Int64Em, FileClass;
 
 type
   ECompressError = class(Exception);

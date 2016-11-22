@@ -15,7 +15,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, SysUtils, {$IFNDEF Delphi3orHigher} Ole2, {$ENDIF}
+  Winapi.Windows, System.SysUtils, {$IFNDEF Delphi3orHigher} Winapi.Ole2, {$ENDIF}
   Compress, Int64Em;
   { Note: Ole2 must be included in the 'uses' clause on D2, and after Windows,
     because it redefines E_* constants in Windows that are incorrect.

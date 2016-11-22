@@ -66,7 +66,7 @@ type
 implementation
 
 uses
-  SysUtils;
+  System.SysUtils;
 
 {$IFNDEF UNICODE}
 type

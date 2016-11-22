@@ -14,7 +14,7 @@ unit PasswordEdit;
 interface
 
 uses
-  Windows, Classes, Controls, StdCtrls;
+  Winapi.Windows, System.Classes, Vcl.Controls, Vcl.StdCtrls;
 
 type
   TPasswordEdit = class(TCustomEdit)

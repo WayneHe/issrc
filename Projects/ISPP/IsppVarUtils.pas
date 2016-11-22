@@ -26,7 +26,7 @@ const
 
 implementation
 
-uses SysUtils, IsppConsts;
+uses System.SysUtils, IsppConsts;
 
 function SimplifyLValue(var Src: TIsppVariant): Boolean;
 begin

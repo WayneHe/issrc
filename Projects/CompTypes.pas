@@ -12,7 +12,7 @@ unit CompTypes;
 interface
 
 uses
-  Windows, SysUtils, Registry, Classes;
+  Winapi.Windows, System.SysUtils, System.Win.Registry, System.Classes;
 
 type
   TConfigIniFile = class(TRegIniFile)

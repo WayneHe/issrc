@@ -16,7 +16,7 @@ program ISCC;
 
 uses
   SafeDLLPath in 'SafeDLLPath.pas',
-  Windows, SysUtils, Classes,
+  Winapi.Windows, System.SysUtils, System.Classes,
   {$IFDEF STATICCOMPILER} Compile, {$ENDIF}
   PathFunc, CmnFunc2, CompInt, FileClass, CompTypes;
 

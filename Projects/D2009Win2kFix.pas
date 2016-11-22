@@ -29,7 +29,7 @@ implementation
 
 {$IFDEF Delphi2009Or2010}   { Only Delphi 2009/2010 }
 uses
-  Windows, SysUtils;
+  Winapi.Windows, System.SysUtils;
 
 {
   Details:

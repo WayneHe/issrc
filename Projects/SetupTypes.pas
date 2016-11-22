@@ -12,7 +12,7 @@ unit SetupTypes;
 interface
 
 uses
-  SysUtils, Classes, Struct;
+  System.SysUtils, System.Classes, Struct;
 
 type
   TSetupStep = (ssPreInstall, ssInstall, ssPostInstall, ssDone);

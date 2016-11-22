@@ -16,7 +16,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms;
 
 function BrowseForFolder(const Prompt: String; var Directory: String;
   const ParentWnd: HWND; const NewFolderButton: Boolean): Boolean;
@@ -33,7 +33,7 @@ function NewGetSaveFileName(const Prompt: String; var FileName: String;
 implementation
 
 uses
-  CommDlg, ShlObj, {$IFNDEF Delphi3orHigher} Ole2, {$ELSE} ActiveX, {$ENDIF}
+  Winapi.CommDlg, Winapi.ShlObj, {$IFNDEF Delphi3orHigher} Winapi.Ole2, {$ELSE} Winapi.ActiveX, {$ENDIF}
   PathFunc;
 
 function BrowseCallback(Wnd: HWND; uMsg: UINT; lParam, lpData: LPARAM): Integer; stdcall;

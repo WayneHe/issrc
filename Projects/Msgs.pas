@@ -49,7 +49,7 @@ const
 implementation
 
 uses
-  Windows, SysUtils, Compress, CmnFunc2, FileClass;
+  Winapi.Windows, System.SysUtils, Compress, CmnFunc2, FileClass;
 
 const
   SMsgsFileTooLarge = 'Internal error: Messages file is too large';

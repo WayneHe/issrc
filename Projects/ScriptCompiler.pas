@@ -14,7 +14,7 @@ unit ScriptCompiler;
 interface
 
 uses
-  Classes, uPSUtils;
+  System.Classes, uPSUtils;
 
 type
   TScriptCompilerOnLineToLineInfo = procedure(const Line: LongInt; var Filename: String; var FileLine: LongInt) of object;
@@ -54,7 +54,7 @@ type
 implementation
 
 uses
-  SysUtils,
+  System.SysUtils,
   uPSCompiler, uPSC_dll,
   ScriptClasses_C, ScriptFunc_C;
 

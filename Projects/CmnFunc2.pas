@@ -16,7 +16,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, SysUtils;
+  Winapi.Windows, System.SysUtils;
 
 { Delphi 2.01's RegStr unit should never be used because it contains many
   wrong declarations. Delphi 3's RegStr unit doesn't have this problem, but
@@ -1505,13 +1505,13 @@ begin
             if FindData.dwFileAttributes and FILE_ATTRIBUTE_READONLY <> 0 then
               SetFileAttributes(PChar(FN), FindData.dwFileAttributes and not FILE_ATTRIBUTE_READONLY);
             if FindData.dwFileAttributes and FILE_ATTRIBUTE_DIRECTORY = 0 then
-              Windows.DeleteFile(PChar(FN))
+              Winapi.Windows.DeleteFile(PChar(FN))
             else
               DeleteDirTree(FN);
           end;
         until not FindNextFile(H, FindData);
       finally
-        Windows.FindClose(H);
+        Winapi.Windows.FindClose(H);
       end;
     end;
   end;
@@ -1696,7 +1696,7 @@ begin
   SecurityAttr.nLength := SizeOf(SecurityAttr);
   SecurityAttr.lpSecurityDescriptor := @SecurityDesc;
   SecurityAttr.bInheritHandle := False;
-  Windows.CreateMutex(@SecurityAttr, False, PChar(MutexName));
+  Winapi.Windows.CreateMutex(@SecurityAttr, False, PChar(MutexName));
 end;
 
 { TOneShotTimer }

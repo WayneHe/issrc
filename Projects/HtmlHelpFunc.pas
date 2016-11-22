@@ -16,7 +16,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows;
+  Winapi.Windows;
 
 const
   HH_DISPLAY_TOPIC = $0000;
@@ -46,7 +46,7 @@ procedure FreeHtmlHelpLibrary;
 implementation
 
 uses
-  Messages, SysUtils, CmnFunc2, PathFunc;
+  Winapi.Messages, System.SysUtils, CmnFunc2, PathFunc;
 
 var
   HHCtrl: THandle;

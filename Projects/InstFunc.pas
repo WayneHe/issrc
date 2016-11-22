@@ -12,7 +12,7 @@ unit InstFunc;
 interface
 
 uses
-  Windows, SysUtils, Struct, Int64Em, MD5, SHA1, CmnFunc2;
+  Winapi.Windows, System.SysUtils, Struct, Int64Em, MD5, SHA1, CmnFunc2;
 
 {$I VERSION.INC}
 
@@ -117,7 +117,7 @@ function ForceDirectories(const DisableFsRedir: Boolean; Dir: String): Boolean;
 implementation
 
 uses
-  Messages, ShellApi, PathFunc, Msgs, MsgIDs, FileClass, RedirFunc;
+  Winapi.Messages, Winapi.ShellApi, PathFunc, Msgs, MsgIDs, FileClass, RedirFunc;
 
 procedure InternalError(const Id: String);
 begin
@@ -471,7 +471,7 @@ begin
           end;
         until (BreakOnError and not Result) or not FindNextFile(H, FindData);
       finally
-        Windows.FindClose(H);
+        Winapi.Windows.FindClose(H);
       end;
     end;
   end;
@@ -521,7 +521,7 @@ begin
         end;
       end;
     finally
-      Windows.FindClose(H);
+      Winapi.Windows.FindClose(H);
     end;
   end
   else begin
@@ -677,7 +677,7 @@ var
 begin
   Handle := FindFirstFileRedir(DisableFsRedir, Filename, FindData);
   if Handle <> INVALID_HANDLE_VALUE then begin
-    Windows.FindClose(Handle);
+    Winapi.Windows.FindClose(Handle);
     if FindData.dwFileAttributes and FILE_ATTRIBUTE_DIRECTORY = 0 then begin
       DateTime := FindData.ftLastWriteTime;
       Result := True;

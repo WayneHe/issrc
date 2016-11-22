@@ -14,7 +14,7 @@ unit CompInt;
 interface
 
 uses
-  Windows;
+  Winapi.Windows;
 
 const
   { Constants passed in Code parameter of callback function }

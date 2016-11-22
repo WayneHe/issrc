@@ -14,7 +14,7 @@ unit SpawnCommon;
 interface
 
 uses
-  Messages;
+  Winapi.Messages;
 
 const
   { Spawn client -> spawn server messages }

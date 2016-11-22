@@ -14,7 +14,7 @@ unit bzlib;
 interface
 
 uses
-  Windows, SysUtils, Compress;
+  Winapi.Windows, System.SysUtils, Compress;
 
 function BZInitCompressFunctions(Module: HMODULE): Boolean;
 function BZInitDecompressFunctions(Module: HMODULE): Boolean;

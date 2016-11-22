@@ -14,8 +14,8 @@ unit UninstSharedFileForm;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  SetupForm, StdCtrls, NewStaticText, BidiCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  SetupForm, Vcl.StdCtrls, NewStaticText, BidiCtrls;
 
 type
   TUninstSharedFileForm = class(TSetupForm)

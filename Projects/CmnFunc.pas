@@ -16,7 +16,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, Messages, SysUtils, Forms, Graphics, Controls, StdCtrls, Classes;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, Vcl.Forms, Vcl.Graphics, Vcl.Controls, Vcl.StdCtrls, System.Classes;
 
 type
   TWindowDisabler = class
@@ -57,7 +57,7 @@ procedure SetMessageBoxCallbackFunc(const AFunc: TMsgBoxCallbackFunc; const APar
 implementation
 
 uses
-  Consts, PathFunc, CmnFunc2;
+  Vcl.Consts, PathFunc, CmnFunc2;
 
 var
   MessageBoxCaptions: array[TMsgBoxType] of PChar;
@@ -421,7 +421,7 @@ begin
     foreground. This gives Windows an enabled window to re-activate, which
     is invisible to the user. }
   if WindowDisablerWndClassAtom = 0 then
-    WindowDisablerWndClassAtom := Windows.RegisterClass(WndClass);
+    WindowDisablerWndClassAtom := Winapi.Windows.RegisterClass(WndClass);
   if WindowDisablerWndClassAtom <> 0 then begin
     { Create an invisible owner window for the fallback window so that it
       doesn't display a taskbar button. (We can't just give it the

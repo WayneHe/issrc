@@ -17,7 +17,7 @@ unit Helper;
 interface
 
 uses
-  Windows, SysUtils, Struct;
+  Winapi.Windows, System.SysUtils, Struct;
 
 function GetHelperResourceName: String;
 function HelperGrantPermission(const AObjectType: DWORD;
@@ -33,7 +33,7 @@ implementation
 {x$DEFINE HELPERDEBUG}
 
 uses
-  Forms, Int64Em, CmnFunc, CmnFunc2, PathFunc, Main, InstFunc, Logging, Msgs,
+  Vcl.Forms, Int64Em, CmnFunc, CmnFunc2, PathFunc, Main, InstFunc, Logging, Msgs,
   MsgIDs;
 
 const

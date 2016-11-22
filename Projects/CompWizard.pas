@@ -14,7 +14,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, Forms, Classes, Graphics, StdCtrls, ExtCtrls, Controls, Dialogs,
+  Winapi.Windows, Vcl.Forms, System.Classes, Vcl.Graphics, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Controls, Vcl.Dialogs,
   UIStateForm, NewStaticText, DropListBox, NewCheckListBox;
 
 type
@@ -162,7 +162,7 @@ implementation
 {$R *.DFM}
 
 uses
-  SysUtils, ShlObj, {$IFNDEF Delphi3orHigher} Ole2, {$ELSE} ActiveX, {$ENDIF}
+  System.SysUtils, Winapi.ShlObj, {$IFNDEF Delphi3orHigher} Winapi.Ole2, {$ELSE} Winapi.ActiveX, {$ENDIF}
   PathFunc, CmnFunc, CmnFunc2, VerInfo, BrowseFunc,
   CompMsgs, CompWizardFile, CompForm;
 

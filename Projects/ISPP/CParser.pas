@@ -8,7 +8,7 @@ unit CParser;
 
 interface
 
-uses SysUtils;
+uses System.SysUtils;
 
 type
 

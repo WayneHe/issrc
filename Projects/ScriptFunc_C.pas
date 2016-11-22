@@ -19,7 +19,7 @@ procedure ScriptFuncLibraryRegister_C(ScriptCompiler: TPSPascalCompiler);
 implementation
 
 uses
-  Windows, SysUtils, TypInfo,
+  Winapi.Windows, System.SysUtils, System.TypInfo,
   CmnFunc2, MsgIDs, Struct,
   SetupTypes, ScriptFunc;
 

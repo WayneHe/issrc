@@ -14,7 +14,7 @@ interface
 {$I ..\Projects\VERSION.INC}
 
 uses
-  Windows, Controls, Graphics, Classes;
+  Winapi.Windows, Vcl.Controls, Vcl.Graphics, System.Classes;
 
 type
 {$IFNDEF IS_D3}

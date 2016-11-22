@@ -16,8 +16,8 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, SysUtils, Messages, Classes, Graphics, Controls, Forms, Dialogs,
-  SetupForm, StdCtrls, ExtCtrls, NewStaticText, BitmapImage, BidiCtrls;
+  Winapi.Windows, System.SysUtils, Winapi.Messages, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  SetupForm, Vcl.StdCtrls, Vcl.ExtCtrls, NewStaticText, BitmapImage, BidiCtrls;
 
 type
   TNewDiskForm = class(TSetupForm)

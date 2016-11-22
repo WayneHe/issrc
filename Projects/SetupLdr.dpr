@@ -12,9 +12,9 @@ program SetupLdr;
 uses
   SafeDLLPath in 'SafeDLLPath.pas',
   XPTheme in 'XPTheme.pas',
-  Windows,
-  Messages,
-  SysUtils,
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
   Compress in 'Compress.pas',
   LZMADecompSmall in 'LZMADecompSmall.pas',
   SetupEnt in 'SetupEnt.pas',

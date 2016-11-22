@@ -9,14 +9,14 @@ interface
 
 {$I ..\Version.inc}
 
-uses Windows, Classes, IsppVarUtils, IsppIntf, IsppTranslate, IsppParser;
+uses Winapi.Windows, System.Classes, IsppVarUtils, IsppIntf, IsppTranslate, IsppParser;
 
 procedure Register(Preproc: TPreprocessor);
 
 implementation
 
-uses SysUtils, IniFiles, Registry, IsppConsts, IsppBase, IsppIdentMan,
-  IsppSessions, DateUtils, FileClass, MD5, SHA1, PathFunc, CmnFunc2;
+uses System.SysUtils, System.IniFiles, System.Win.Registry, IsppConsts, IsppBase, IsppIdentMan,
+  IsppSessions, System.DateUtils, FileClass, MD5, SHA1, PathFunc, CmnFunc2;
   
 var
   IsWow64: Boolean;

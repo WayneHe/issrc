@@ -52,9 +52,9 @@ type
 
 implementation
 
-uses
-  Windows,
-  Forms, SysUtils,
+uses 
+  Winapi.Windows,
+  Vcl.Forms, System.SysUtils,
   uPSR_dll,
   ScriptClasses_R, ScriptFunc_R;
 

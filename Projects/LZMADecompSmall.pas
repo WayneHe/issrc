@@ -15,7 +15,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, SysUtils, Compress, Int64Em;
+  Winapi.Windows, System.SysUtils, Compress, Int64Em;
 
 type
   { Internally-used record }

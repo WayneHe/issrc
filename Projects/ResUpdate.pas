@@ -14,7 +14,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, SysUtils, FileClass;
+  Winapi.Windows, System.SysUtils, FileClass;
 
 function ReadSignatureAndChecksumFields(const F: TCustomFile;
   var ASignatureAddress, ASignatureSize, AChecksum: DWORD): Boolean;

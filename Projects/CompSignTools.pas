@@ -14,8 +14,8 @@ unit CompSignTools;
 interface
 
 uses
-  Windows, Messages, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, UIStateForm;
+  Winapi.Windows, Winapi.Messages, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.StdCtrls, UIStateForm;
 
 type
   TSignToolsForm = class(TUIStateForm)
@@ -46,7 +46,7 @@ type
 implementation
 
 uses
-  CmnFunc, CompForm, SysUtils;
+  CmnFunc, CompForm, System.SysUtils;
 
 {$R *.DFM}
 

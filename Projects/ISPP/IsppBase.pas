@@ -7,7 +7,7 @@ unit IsppBase;
 
 interface
 
-uses IsppIntf, SysUtils;
+uses IsppIntf, System.SysUtils;
 
 type
 

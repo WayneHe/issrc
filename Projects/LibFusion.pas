@@ -25,10 +25,10 @@ unit LibFusion;
 interface
 
 uses
-  Ole2, SysUtils, Windows, CmnFunc2;
+  Winapi.Ole2, System.SysUtils, Winapi.Windows, CmnFunc2;
 
 type
-  IAssemblyCache = class(Ole2.IUnknown)
+  IAssemblyCache = class(Winapi.Ole2.IUnknown)
     function UninstallAssembly(dwFlags: Integer; pszAssemblyName: PWideChar; pvReserved: Integer; var pulDisposition: Integer): Integer; virtual; stdcall; abstract;
     function QueryAssemblyInfo(dwFlags: Integer; pszAssemblyName: PWideChar; pAsmInfo: Integer): Integer; virtual; stdcall; abstract;
     function CreateAssemblyCacheItem(dwFlags: Integer; pvReserved: Integer; var ppAsmItem: Integer; pszAssemblyName: PWideChar): Integer; virtual; stdcall; abstract;

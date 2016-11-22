@@ -22,8 +22,8 @@ unit CompForm;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  UIStateForm, StdCtrls, ExtCtrls, Menus, Buttons, ComCtrls, CommCtrl,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  UIStateForm, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Menus, Vcl.Buttons, Vcl.ComCtrls, Winapi.CommCtrl,
   ScintInt, ScintEdit, ScintStylerInnoSetup, NewTabSet,
   DebugStruct, CompInt, UxThemeISX;
 
@@ -427,7 +427,7 @@ procedure InitFormFont(Form: TForm);
 implementation
 
 uses
-  ActiveX, Clipbrd, ShellApi, ShlObj, IniFiles, Registry, CommDlg, Consts,
+  Winapi.ActiveX, Vcl.Clipbrd, Winapi.ShellApi, Winapi.ShlObj, System.IniFiles, System.Win.Registry, Winapi.CommDlg, Vcl.Consts,
   PathFunc, CmnFunc, CmnFunc2, FileClass, CompMsgs, TmSchemaISX, BrowseFunc,
   HtmlHelpFunc, TaskbarProgressFunc,
   {$IFDEF STATICCOMPILER} Compile, {$ENDIF}
@@ -3555,7 +3555,7 @@ begin
       still receive keystrokes. This is needed on Vista if the UAC dialog
       doesn't come to the foreground for some reason (e.g. if the following
       SetActiveWindow call is removed). }
-    Windows.SetFocus(0);
+    Winapi.Windows.SetFocus(0);
     { On Vista, when disabling windows, we have to make the application window
       the active window, otherwise the UAC dialog doesn't come to the
       foreground automatically. Note: This isn't done on older versions simply
@@ -3566,7 +3566,7 @@ begin
     ErrorCode := GetLastError;
   finally
     EnableTaskWindows(WindowList);
-    Windows.SetFocus(SaveFocusWindow);
+    Winapi.Windows.SetFocus(SaveFocusWindow);
   end;
   if not ShellExecuteResult then begin
     { Don't display error message if user clicked Cancel at UAC dialog }

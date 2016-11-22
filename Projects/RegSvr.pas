@@ -16,7 +16,7 @@ procedure RunRegSvr;
 implementation
 
 uses
-  Windows, SysUtils, Classes, Forms, PathFunc, CmnFunc2, InstFunc, InstFnc2,
+  Winapi.Windows, System.SysUtils, System.Classes, Vcl.Forms, PathFunc, CmnFunc2, InstFunc, InstFnc2,
   FileClass, CmnFunc, Struct, Main, Msgs, MsgIDs, RegDLL, Helper;
 
 procedure DeleteOldTempFiles(const Path: String);
@@ -46,7 +46,7 @@ begin
         end;
       until not FindNextFile(H, FindData);
     finally
-      Windows.FindClose(H);
+      Winapi.Windows.FindClose(H);
     end;
   end;
 end;
@@ -136,7 +136,7 @@ begin
     DLL were registered simultaneously by two RegSvr processes? Could the
     registry entries be in an incomplete/inconsistent state? I'm not sure, so
     a mutex is used here to ensure registrations are serialized. }
-  Mutex := Windows.CreateMutex(nil, False, 'Inno-Setup-RegSvr-Mutex');
+  Mutex := Winapi.Windows.CreateMutex(nil, False, 'Inno-Setup-RegSvr-Mutex');
   ShowWindow(Application.Handle, SW_HIDE);  { hide taskbar button while waiting }
   if Mutex <> 0 then begin
     { Even though we have no visible windows, process messages while waiting

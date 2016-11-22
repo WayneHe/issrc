@@ -17,7 +17,7 @@ unit RedirFunc;
 interface
 
 uses
-  Windows, SysUtils, FileClass, VerInfo;
+  Winapi.Windows, System.SysUtils, FileClass, VerInfo;
 
 type
   TPreviousFsRedirectionState = record
@@ -234,7 +234,7 @@ begin
     Exit;
   end;
   try
-    Result := Windows.DeleteFile(PChar(Filename));
+    Result := Winapi.Windows.DeleteFile(PChar(Filename));
     ErrorCode := GetLastError;
   finally
     RestoreFsRedirection(PrevState);

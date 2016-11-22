@@ -20,7 +20,7 @@ unit NewProgressBar;
 interface
 
 uses
-  Messages, Classes, Controls, ComCtrls;
+  Winapi.Messages, System.Classes, Vcl.Controls, Vcl.ComCtrls;
 
 type
   TNewProgressBarState = (npbsNormal, npbsError, npbsPaused);
@@ -59,7 +59,7 @@ procedure Register;
 implementation
 
 uses
-  Windows, CommCtrl;
+  Winapi.Windows, Winapi.CommCtrl;
 
 var
   XP, Vista: Boolean;

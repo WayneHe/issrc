@@ -14,7 +14,7 @@ unit NewNotebookReg;
 interface
 
 uses
-  Classes;
+  System.Classes;
 
 procedure Register;
 

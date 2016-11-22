@@ -14,7 +14,7 @@ unit CompResUpdate;
 interface
 
 uses
-  Windows, SysUtils, FileClass, VerInfo;
+  Winapi.Windows, System.SysUtils, FileClass, VerInfo;
 
 {$I VERSION.INC}
 
@@ -27,7 +27,7 @@ procedure UpdateVersionInfo(const F: TFile;
 implementation
 
 uses
-  ResUpdate{$IFDEF UNICODE}, Math{$ENDIF};
+  ResUpdate{$IFDEF UNICODE}, System.Math{$ENDIF};
 
 procedure Error(const Msg: String);
 begin

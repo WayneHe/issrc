@@ -19,7 +19,7 @@ procedure UnregisterISSFileAssociation;
 implementation
 
 uses
-  Windows, SysUtils, PathFunc, ShlObj, CmnFunc2;
+  Winapi.Windows, System.SysUtils, PathFunc, Winapi.ShlObj, CmnFunc2;
 
 procedure RegisterISSFileAssociation;
 

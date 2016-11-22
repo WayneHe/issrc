@@ -51,7 +51,7 @@ unit UxThemeISX;
 interface
 
 uses
-  Windows;
+  Winapi.Windows;
 
 procedure FreeThemeLibrary;
 function InitThemeLibrary: Boolean;
@@ -1014,7 +1014,7 @@ implementation
 //----------------------------------------------------------------------------------------------------------------------
 
 uses
-  SysUtils, PathFunc;
+  System.SysUtils, PathFunc;
 
 const
   themelib = 'uxtheme.dll';

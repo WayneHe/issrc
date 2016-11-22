@@ -14,8 +14,8 @@ unit DropListBox;
 interface
 
 uses
-  StdCtrls,
-  Messages;
+  Vcl.StdCtrls,
+  Winapi.Messages;
 
 type
   TDropListBox = class;
@@ -81,8 +81,8 @@ procedure Register;
 implementation
 
 uses
-  Classes,
-  Windows, ShellAPI;
+  System.Classes,
+  Winapi.Windows, Winapi.ShellAPI;
 
 procedure TDropListBox.CreateWnd;
 begin

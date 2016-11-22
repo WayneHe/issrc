@@ -14,7 +14,7 @@ unit BidiUtils;
 interface
 
 uses
-  Windows, SysUtils, Messages, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls;
+  Winapi.Windows, System.SysUtils, Winapi.Messages, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 procedure FlipControls(const AParentCtl: TWinControl);
 procedure FlipRect(var Rect: TRect; const ParentRect: TRect; const UseRightToLeft: Boolean);

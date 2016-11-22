@@ -19,7 +19,7 @@ procedure HandleUninstallerEndSession;
 implementation
 
 uses
-  Windows, SysUtils, Messages, Forms, PathFunc, CmnFunc, CmnFunc2, Undo, Msgs,
+  Winapi.Windows, System.SysUtils, Winapi.Messages, Vcl.Forms, PathFunc, CmnFunc, CmnFunc2, Undo, Msgs,
   MsgIDs, InstFunc, Struct, SetupEnt, UninstProgressForm, UninstSharedFileForm,
   FileClass, ScriptRunner, DebugClient, SetupTypes, Logging, Main, Helper,
   SpawnServer;

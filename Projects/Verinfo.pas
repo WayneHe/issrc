@@ -14,7 +14,7 @@ unit VerInfo;
 interface
 
 uses
-  Windows, SysUtils, Int64Em;
+  Winapi.Windows, System.SysUtils, Int64Em;
 
 {$I VERSION.INC}
 

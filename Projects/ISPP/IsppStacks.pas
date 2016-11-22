@@ -8,7 +8,7 @@ unit IsppStacks;
 
 interface
 
-uses Classes;
+uses System.Classes;
 
 type
 

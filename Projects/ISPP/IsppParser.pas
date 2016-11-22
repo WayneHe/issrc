@@ -42,7 +42,7 @@ function ParseInt(const VarMan: IIdentManager; const AExpr: string; Offset: Inte
 
 implementation
 
-uses SysUtils, IsppSessions, IsppConsts, IsppVarUtils;
+uses System.SysUtils, IsppSessions, IsppConsts, IsppVarUtils;
 
 function Parse(const VarMan: IIdentManager; const AExpr: string; Offset: Integer; Options: PIsppParserOptions): TIsppVariant;
 begin

@@ -14,8 +14,8 @@ unit RestartManager;
 interface
 
 uses
-  {$IFNDEF Delphi3orHigher} OLE2, {$ELSE} ActiveX, {$ENDIF}
-  Windows;
+  {$IFNDEF Delphi3orHigher} Winapi.OLE2, {$ELSE} Winapi.ActiveX, {$ENDIF}
+  Winapi.Windows;
 
 procedure FreeRestartManagerLibrary;
 function InitRestartManagerLibrary: Boolean;
@@ -108,7 +108,7 @@ implementation
 //----------------------------------------------------------------------------------------------------------------------
 
 uses
-  SysUtils, PathFunc;
+  System.SysUtils, PathFunc;
 
 const
   restartmanagerlib = 'Rstrtmgr.dll';

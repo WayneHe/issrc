@@ -14,7 +14,7 @@ unit ArcFour;
 interface
 
 uses
-  Windows;
+  Winapi.Windows;
 
 type
   TArcFourContext = record

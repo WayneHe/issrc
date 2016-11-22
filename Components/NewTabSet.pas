@@ -14,7 +14,7 @@ unit NewTabSet;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms;
 
 type
   TNewTabSet = class(TCustomControl)

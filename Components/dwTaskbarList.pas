@@ -24,7 +24,7 @@ unit dwTaskbarList;
 interface
 
 uses
-  Windows {$IFDEF DELPHI2}, OLE2 {$ENDIF};
+  Winapi.Windows {$IFDEF DELPHI2}, Winapi.OLE2 {$ENDIF};
 
 const
   CLSID_TaskbarList: TGUID = (

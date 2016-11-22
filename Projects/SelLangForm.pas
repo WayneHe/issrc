@@ -14,8 +14,8 @@ unit SelLangForm;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  SetupForm, StdCtrls, ExtCtrls, NewStaticText, BitmapImage, BidiCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  SetupForm, Vcl.StdCtrls, Vcl.ExtCtrls, NewStaticText, BitmapImage, BidiCtrls;
 
 type
   TSelectLanguageForm = class(TSetupForm)

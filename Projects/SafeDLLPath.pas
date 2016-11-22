@@ -43,7 +43,7 @@ interface
 implementation
 
 uses
-  Windows;
+  Winapi.Windows;
 
 const
   LOAD_LIBRARY_SEARCH_SYSTEM32 = $00000800;

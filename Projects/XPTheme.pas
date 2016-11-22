@@ -20,7 +20,7 @@ implementation
 {$R XPTheme.res}
 
 uses
-  Windows;
+  Winapi.Windows;
 
 { Avoid including Variants (via CommCtrl) in SetupLdr (SetupLdr uses XPTheme), saving 26 KB. }
 procedure InitCommonControls; external comctl32 name 'InitCommonControls';

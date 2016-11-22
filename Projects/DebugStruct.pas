@@ -14,7 +14,7 @@ unit DebugStruct;
 interface
 
 uses
-  Windows, Messages, SysUtils;
+  Winapi.Windows, Winapi.Messages, System.SysUtils;
 
 const
   { Debug client -> debugger messages }

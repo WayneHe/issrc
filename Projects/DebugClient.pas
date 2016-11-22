@@ -14,7 +14,7 @@ unit DebugClient;
 interface
 
 uses
-  Windows, SysUtils, Messages, DebugStruct;
+  Winapi.Windows, System.SysUtils, Winapi.Messages, DebugStruct;
 
 var
   Debugging: Boolean;
@@ -35,7 +35,7 @@ procedure SetDebugWnd(Wnd: HWND; WantCodeText: Boolean);
 implementation
 
 uses
-  Forms, Classes, CmnFunc2, Struct, InstFunc, Main;
+  Vcl.Forms, System.Classes, CmnFunc2, Struct, InstFunc, Main;
 
 type
   TDummyClass = class

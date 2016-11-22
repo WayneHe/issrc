@@ -23,7 +23,7 @@ procedure SetAppTaskbarProgressValue(const Completed, Total: Cardinal);
 implementation
 
 uses
-  Windows, {$IFDEF VER90} OLE2 {$ELSE} ActiveX {$ENDIF}, Forms, dwTaskbarList;
+  Winapi.Windows, {$IFDEF VER90} Winapi.OLE2 {$ELSE} Winapi.ActiveX {$ENDIF}, Vcl.Forms, dwTaskbarList;
 
 var
   TaskbarListInitialized: Boolean;

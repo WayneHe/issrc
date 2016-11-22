@@ -15,7 +15,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, SysUtils, Int64Em, Compress;
+  Winapi.Windows, System.SysUtils, Int64Em, Compress;
 
 type
   TLZMACustomDecompressor = class(TCustomDecompressor)

@@ -23,11 +23,11 @@ function ScriptClassesLibraryRegister_R(ScriptInterpreter: TPSExec): TPSRuntimeC
 implementation
 
 uses
-  Windows, Controls, Forms, StdCtrls, Graphics,
+  Winapi.Windows, Vcl.Controls, Vcl.Forms, Vcl.StdCtrls, Vcl.Graphics,
   uPSR_std, uPSR_classes, uPSR_graphics, uPSR_controls, uPSR_forms,
   uPSR_stdctrls, uPSR_extctrls, uPSR_comobj, {$IFNDEF UNICODE} uPSUtils, {$ENDIF}
   NewStaticText, NewCheckListBox, NewProgressBar, RichEditViewer,
-  ExtCtrls, UIStateForm, SetupForm, Main, Wizard, SetupTypes, PasswordEdit,
+  Vcl.ExtCtrls, UIStateForm, SetupForm, Main, Wizard, SetupTypes, PasswordEdit,
   FolderTreeView, BitmapImage, NewNotebook, ScriptDlg, BidiCtrls,
   UninstProgressForm;
 

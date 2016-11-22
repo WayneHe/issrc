@@ -18,7 +18,7 @@ interface
 {$ENDIF}
 
 uses
-  Windows, Messages, SysUtils, Classes, Controls, Forms;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Controls, Vcl.Forms;
 
 type
   TNewStaticText = class(TWinControl)

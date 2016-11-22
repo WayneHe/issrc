@@ -16,7 +16,7 @@ function ISPreprocessScript(var Params: TPreprocessScriptParams): Integer; stdca
 implementation
 
 uses
-  SysUtils, CmnFunc2, PathFunc,
+  System.SysUtils, CmnFunc2, PathFunc,
   IsppBase, IsppTranslate, IsppSessions, IsppIntf, IsppIdentMan, IsppVarUtils;
 
 //type TPreprocProtectedMethods = class(TPreprocessor);

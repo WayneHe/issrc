@@ -21,7 +21,7 @@ function ExtractTemporaryFiles(const Pattern: String): Integer;
 implementation
 
 uses
-  Windows, SysUtils, Messages, Classes, Forms, ShlObj, Struct, Undo, SetupTypes,
+  Winapi.Windows, System.SysUtils, Winapi.Messages, System.Classes, Vcl.Forms, Winapi.ShlObj, Struct, Undo, SetupTypes,
   InstFunc, InstFnc2, SecurityFunc, Msgs, Main, Logging, Extract, FileClass,
   Compress, SHA1, PathFunc, CmnFunc, CmnFunc2, RedirFunc, Int64Em, MsgIDs,
   Wizard, DebugStruct, DebugClient, VerInfo, ScriptRunner, RegDLL, Helper,
@@ -1613,7 +1613,7 @@ var
             end;
           until not FindNextFile(H, FindData);
         finally
-          Windows.FindClose(H);
+          Winapi.Windows.FindClose(H);
         end;
       end;
 
@@ -1629,7 +1629,7 @@ var
                   ExpectedBytesLeft) or Result;
             until not FindNextFile(H, FindData);
           finally
-            Windows.FindClose(H);
+            Winapi.Windows.FindClose(H);
           end;
         end;
       end;
@@ -2626,7 +2626,7 @@ var
              (S[9] = '.') then
             ExistingFiles[StrToInt(Copy(S, 6, 3))] := True;
         until not FindNextFile(H, FindData);
-        Windows.FindClose(H);
+        Winapi.Windows.FindClose(H);
       end;
     end;
 

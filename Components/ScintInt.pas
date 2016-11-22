@@ -10,7 +10,7 @@ unit ScintInt;
 interface
 
 uses
-  Windows;
+  Winapi.Windows;
 
 const
   INVALID_POSITION = -1;

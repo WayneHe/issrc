@@ -33,6 +33,7 @@ echo Running help compiler:
 echo.
 del Staging\ispp.chm
 if exist Staging\ispp.chm goto failed
+echo  "%HHCEXE%"
 "%HHCEXE%" Staging\hh_project.hhp
 if %errorlevel% neq 1 goto failed
 if not exist Staging\ispp.chm goto failed

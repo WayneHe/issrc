@@ -12,7 +12,7 @@ unit ScintStylerInnoSetup;
 interface
 
 uses
-  SysUtils, Classes, Graphics, ScintEdit;
+  System.SysUtils, System.Classes, Vcl.Graphics, ScintEdit;
 
 type
   { Internally-used types }
@@ -87,7 +87,7 @@ type
 implementation
 
 uses
-  TypInfo;
+  System.TypInfo;
 
 type
   TInnoSetupStylerLineState = record

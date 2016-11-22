@@ -18,7 +18,7 @@ procedure PathFuncRunTests(const AlsoTestJapaneseDBCS: Boolean);
 implementation
 
 uses
-  Windows, SysUtils, PathFunc;
+  Winapi.Windows, System.SysUtils, PathFunc;
 
 procedure PathFuncRunTests(const AlsoTestJapaneseDBCS: Boolean);
 

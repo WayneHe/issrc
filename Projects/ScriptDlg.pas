@@ -14,7 +14,7 @@ interface
 {$I VERSION.INC}
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, StdCtrls,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.StdCtrls,
   Wizard,
   NewCheckListBox, NewStaticText, NewProgressBar, PasswordEdit, RichEditViewer,
   BidiCtrls, TaskbarProgressFunc;

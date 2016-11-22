@@ -11,9 +11,9 @@ program Compil32;
 
 uses
   SafeDLLPath in 'SafeDLLPath.pas',
-  Windows,
-  SysUtils,
-  Forms,
+  Winapi.Windows,
+  System.SysUtils,
+  FMX.Forms,
   PathFunc,
   CompForm in 'CompForm.pas' {CompileForm},
   CmnFunc in 'CmnFunc.pas',

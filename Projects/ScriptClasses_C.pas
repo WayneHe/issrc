@@ -102,7 +102,6 @@ begin
     RegisterProperty('OnKeyUp', 'TKeyEvent', iptrw);
     RegisterProperty('ShowLines', 'Boolean', iptrw);
     RegisterProperty('WantTabs', 'Boolean', iptrw);
-    RegisterProperty('RequireRadioSelection', 'Boolean', iptrw);
     RegisterProperty('OnEnter', 'TNotifyEvent', iptrw);
     RegisterProperty('OnExit', 'TNotifyEvent', iptrw);
 
